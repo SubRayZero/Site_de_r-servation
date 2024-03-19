@@ -25,6 +25,11 @@ header {
 
 }
 
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
 .container_header {
     margin: 100px;
     display: flex;
@@ -36,6 +41,7 @@ header {
     background-color: #3E4049;
     color: #F5F5F5;
     padding: 10px;
+
 }
 
 .connection {
@@ -43,6 +49,7 @@ header {
     background-color: #3E4049;
     color: #F5F5F5;
     padding: 10px;
+
 }
 
 .section_red {

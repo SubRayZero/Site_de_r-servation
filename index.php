@@ -34,27 +34,39 @@
         <div class="container_card">
             <div class="card_size">
                 <div class="container_image"></div>
-                <div class="button_reservation">Réservez maintenant</div>
+                <a href="reservation.php">
+                    <div class="button_reservation">Réservez maintenant</div>
+                </a>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <div class="button_reservation">Réservez maintenant</div>
+                <a href="reservation.php">
+                    <div class="button_reservation">Réservez maintenant</div>
+                </a>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <div class="button_reservation">Réservez maintenant</div>
+                <a href="reservation.php">
+                    <div class="button_reservation">Réservez maintenant</div>
+                </a>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <div class="button_reservation">Réservez maintenant</div>
+                <a href="reservation.php">
+                    <div class="button_reservation">Réservez maintenant</div>
+                </a>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <div class="button_reservation">Réservez maintenant</div>
+                <a href="reservation.php">
+                    <div class="button_reservation">Réservez maintenant</div>
+                </a>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <div class="button_reservation">Réservez maintenant</div>
+                <a href="reservation.php">
+                    <div class="button_reservation">Réservez maintenant</div>
+                </a>
             </div>
         </div>
 

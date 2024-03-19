@@ -1,0 +1,56 @@
+.form {
+    background-color: #3E4049;
+    height: 1500px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_form {
+    background-color: #8C9BAD;
+    height: 1129px;
+    width: 734px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    font-size: 30px;
+    font-weight: 600;
+    gap: 83px;
+
+
+}
+
+label {
+    height: 44px;
+}
+
+.mb-3 {
+    width: 575px;
+
+}
+
+input {
+    height: 85px;
+    width: 575px;
+}
+
+.button_validation {
+    height: 85px;
+    width: 575px;
+
+    margin-top: 77px;
+    border-radius: 20px;
+    background-color: #F7BB2B;
+    border: 0;
+
+    font-weight: 600;
+    font-style: italic;
+    text-transform: uppercase;
+
+}

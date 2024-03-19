@@ -16,11 +16,8 @@
 <body>
     <header>
         <div class="container_header">
-            <a href="register">
-                <div class="inscription">S'inscrire</div>
-            </a>
-            <a href="toLogIn.php">
-                <div class="connection">Se connecter</div>
+            <a href="index.php">
+                <div class="inscription">Accueil</div>
             </a>
         </div>
     </header>
