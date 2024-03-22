@@ -27,11 +27,11 @@
         <div class="container_form">
             <form method="POST" action="" onsubmit="return check_form_validity()">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Adresse mail</label>
+                    <label for="exampleFormControlInput1" class="form-label">Adresse mail *</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <label for="exampleFormControlInput1" class="form-label">Password *</label>
                     <input type="password" class="form-control" id="exampleFormControlInput1" required>
                 </div>
                 <input type="submit" value="Se connecter" id="inscription" class="button_validation" />

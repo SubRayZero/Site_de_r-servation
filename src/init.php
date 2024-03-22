@@ -29,3 +29,5 @@ session_start();
 
 $database = new Db();
 $database->getDb();
+
+require_once __DIR__ . "/router.php";

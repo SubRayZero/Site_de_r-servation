@@ -40,6 +40,11 @@ input {
     width: 575px;
 }
 
+select {
+    height: 85px;
+    width: 575px;
+}
+
 .button_validation {
     height: 85px;
     width: 575px;

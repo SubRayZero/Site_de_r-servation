@@ -25,7 +25,7 @@
         <div class="container_form">
             <form method="POST" action="" onsubmit="return check_form_validity()">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Surname</label>
+                    <label for="exampleFormControlInput1" class="form-label">Surname *</label>
                     <input type="texte" class="form-control input" name="surname" id="surname" minlength="3" maxlength="50" required>
                 </div>
                 <div class="mb-3">
@@ -33,15 +33,15 @@
                     <input type="texte" class="form-control" name="firstname" id="firstname" minlength="3" maxlength="50">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Adresse mail</label>
+                    <label for="exampleFormControlInput1" class="form-label">Adresse mail *</label>
                     <input type="email" class="form-control" name="email" id="email" minlength="3" maxlength="80" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <label for="exampleFormControlInput1" class="form-label">Password *</label>
                     <input type="password" class="form-control" name="password" id="password" minlength="7" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                    <label for="exampleFormControlInput1" class="form-label">Confirm Password *</label>
                     <input type="password" class="form-control" name="confirm_password" id="confirm_password" minlength="7" required>
                 </div>
                 <input type="submit" value="Confirmer l'inscription" id="inscription" class="button_validation" />
