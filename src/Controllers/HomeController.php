@@ -1,17 +1,24 @@
 <?php
 
+require_once __DIR__ . '/../Services/Response.php';
+
 class HomeController
 {
-
+    use Response;
 
     public function index()
     {
-        require __DIR__ . "../index.php";
-    }
+        $title = "Accueil";
 
+        $viewData = [
+            'title' => $title
+        ];
+
+        $this->render('HomePageTemplate', $viewData);
+    }
 
     public function pageNotFound()
     {
-        echo ("<p>Page introuvable</p>");
+        $this->render('404');
     }
 }

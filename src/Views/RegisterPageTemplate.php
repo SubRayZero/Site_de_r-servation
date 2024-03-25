@@ -1,3 +1,10 @@
+<?php
+
+//require __DIR__ . "./Repositories/PersonRepository.php/";
+//require __DIR__ . "./Controllers/RegisterControllers.php";
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -7,8 +14,8 @@
     <title>Accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Components/index.css">
-    <link rel="stylesheet" href="Components/form.css">
+    <link rel="stylesheet" href="../Components/index.css">
+    <link rel="stylesheet" href="../Components/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,9 +24,13 @@
 
 <body>
 
-    <?php
-    require 'Components/headerLogIn.php';
-    ?>
+    <header>
+        <div class="container_header">
+            <a href="http://projet6/Site_de_reservation/public/">
+                <div class="inscription">Accueil</div>
+            </a>
+        </div>
+    </header>
 
     <section class="form">
         <div class="container_form">
@@ -48,5 +59,4 @@
             </form>
         </div>
     </section>
-    <script src="./javascript/validity.js"></script>
 </body>
