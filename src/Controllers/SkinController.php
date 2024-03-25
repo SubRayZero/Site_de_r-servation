@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../Services/Response.php';
 
-class ReservationController
+class SkinController
 {
 
     use Response;
@@ -11,11 +11,11 @@ class ReservationController
     public function index()
     {
 
-        $Reservation= new ReservationRepository();
-        $Reservation = $Reservation->getAll();
+        $SkinRepository= new SkinRepository();
+        $Skin = $SkinRepository->getAll();
 
         $viewData = [
-            'reservation' => $Reservation
+            'Skin' => $Skin
         ];
 
         $this->render('ReservationPageTemplate', $viewData);

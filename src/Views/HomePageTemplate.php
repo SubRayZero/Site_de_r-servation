@@ -21,7 +21,7 @@
             <a href="http://projet6/Site_de_reservation/public/RegisterPageTemplate.php">
                 <div class="inscription">S'inscrire</div>
             </a>
-            <a href="./ToLogInPageTemplate.php">
+            <a href="http://projet6/Site_de_reservation/public/ToLogInPageTemplate.php">
                 <div class="connection">Se connecter</div>
             </a>
         </div>

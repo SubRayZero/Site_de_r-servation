@@ -1,3 +1,14 @@
+<?php
+
+require_once __DIR__ . '/../Controllers/SkinController.php';
+//require_once __DIR__ . '/../Controllers/ReservationController.php';
+
+
+
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -44,11 +55,20 @@
                 </div>
                 <div class="mb-3">
                     <label for="autoSizingSelect">Choisissez un skin</label>
-                    <select class="form-select" id="autoSizingSelect">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select name="skin" class="form-select" id="autoSizingSelect">
+
+                        <?php
+
+                        $skinController = new SkinController();
+                        $skins = $skinController->index();
+
+
+                        foreach ($skins as $skin) {
+                            echo ("<option>" . $skin->getName() .  "</option>");
+                        }
+
+                        ?>
+
                     </select>
 
                 </div>

@@ -14,25 +14,24 @@ class RegisterController
             $name = $_POST['surname'];
             $first_name = $_POST['firstname'];
             $email = ($_POST['email']);
-            $password = ($_POST['password']);
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
             $PersonRepository = new PersonRepository();
 
-
             $result = $PersonRepository->create($name, $first_name, $email, $password);
-        }
 
-        return $result;
+            return $result;
+        }
     }
 
 
     public function index()
     {
-        $result=$this->register();
+        $result = $this->register();
 
 
         $viewData = [
-            'reservation' => $result
+            'register' => $result
         ];
 
         $this->render('RegisterPageTemplate', $viewData);
