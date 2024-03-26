@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../Services/Response.php';
+require_once __DIR__ . '/../Repositories/SkinRepository.php';
 
 class SkinController
 {
@@ -12,10 +13,10 @@ class SkinController
     {
 
         $SkinRepository= new SkinRepository();
-        $Skin = $SkinRepository->getAll();
+        $Skins = $SkinRepository->getAll();
 
         $viewData = [
-            'Skin' => $Skin
+            'skin' => $Skins
         ];
 
         $this->render('ReservationPageTemplate', $viewData);

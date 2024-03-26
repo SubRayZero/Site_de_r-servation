@@ -8,3 +8,4 @@ define("URL_HOMEPAGE", "/Site_de_reservation/public/");
 define("URL_RESERVATION", "/Site_de_reservation/public/ReservationPageTemplate.php");
 define("URL_LOGIN", "/Site_de_reservation/public/ToLogInPageTemplate.php");
 define("URL_REGISTER", "/Site_de_reservation/public/RegisterPageTemplate.php");
+define("URL_ACCOUNT", "/Site_de_reservation/public/AccountPageTemplate.php");

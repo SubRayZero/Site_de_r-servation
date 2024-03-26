@@ -1,13 +1,3 @@
-<?php
-
-require_once __DIR__ . '/../Controllers/SkinController.php';
-//require_once __DIR__ . '/../Controllers/ReservationController.php';
-
-
-
-
-?>
-
 
 <!doctype html>
 <html lang="en">
@@ -59,12 +49,14 @@ require_once __DIR__ . '/../Controllers/SkinController.php';
 
                         <?php
 
-                        $skinController = new SkinController();
-                        $skins = $skinController->index();
+                        require_once __DIR__ . '/../Controllers/SkinController.php';
 
+                        $SkinRepository= new SkinRepository();
+                        $Skins = $SkinRepository->getAll();
 
-                        foreach ($skins as $skin) {
-                            echo ("<option>" . $skin->getName() .  "</option>");
+                        foreach ($Skins as $skin) {
+
+                            echo ('<option>' . $skin->getName() .  '</option>');
                         }
 
                         ?>
