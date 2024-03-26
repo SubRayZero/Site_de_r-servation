@@ -21,7 +21,6 @@ class LoginController
 
             if ($LogIn && password_verify($password, $LogIn['password'])) {
                 session_start();
-                //$_SESSION["id_person"]= $LogIn['id'];
                 header("Location: AccountPageTemplate.php");
                 exit;
             }

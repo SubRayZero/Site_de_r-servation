@@ -1,26 +1,40 @@
-
-
 <?php
 
 require_once __DIR__ . '/../Services/Response.php';
+require_once __DIR__ . '/../Repositories/PersonRepository.php';
 
 class AccountController
 {
     use Response;
 
+    public function change()
+    {
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+            //$id_person = "";
+            $name = $_POST['surname'];
+            $first_name = $_POST['firstname'];
+            $email = ($_POST['email']);
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+            $PersonRepository = new PersonRepository();
+
+            $result = $PersonRepository->update($name, $first_name, $email, $password);
+
+            return $result;
+        }
+    }
+
+
     public function index()
     {
-        $title = "Accueil";
+        $result = $this->change();
+
 
         $viewData = [
-            'title' => $title
+            'result' => $result
         ];
 
         $this->render('AccountPageTemplate', $viewData);
-    }
-
-    public function pageNotFound()
-    {
-        $this->render('404');
     }
 }

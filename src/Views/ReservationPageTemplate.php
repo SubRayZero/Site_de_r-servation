@@ -51,7 +51,7 @@
 
                         require_once __DIR__ . '/../Controllers/SkinController.php';
 
-                        $SkinRepository= new SkinRepository();
+                        $SkinRepository = new SkinRepository();
                         $Skins = $SkinRepository->getAll();
 
                         foreach ($Skins as $skin) {

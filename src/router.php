@@ -14,7 +14,7 @@ $loginController = new LoginController();
 $registerController = new RegisterController();
 $reservationController = new ReservationController();
 $skinController = new SkinController();
-$accountController = new AccountController;
+$accountController = new AccountController();
 
 switch ($uri) {
     case URL_HOMEPAGE:

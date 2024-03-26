@@ -1,9 +1,3 @@
-<?php
-
-//require __DIR__ . "./Repositories/PersonRepository.php/";
-//require __DIR__ . "./Controllers/RegisterControllers.php";
-
-?>
 
 <!doctype html>
 <html lang="en">

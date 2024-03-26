@@ -28,4 +28,21 @@ final class PersonRepository extends Db
         return $req->fetchAll(PDO::FETCH_CLASS, Person::class);
     }
 
+    public function update($name, $first_name, $email, $password)
+    {
+        $query = 'UPDATE person SET name = :name, first_name = :first_name, email= :email, password= :password 
+        WHERE email = :email';
+
+        $req = $this->getDb()->prepare($query);
+
+        $req->execute([
+            'name' => $name,
+            'first_name' => $first_name,
+            'email' => $email,
+            'password' => $password,
+        ]);
+
+        return $req->fetchAll(PDO::FETCH_CLASS, Person::class);
+    }
+
 }
