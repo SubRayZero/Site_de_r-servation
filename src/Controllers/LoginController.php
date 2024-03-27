@@ -13,19 +13,21 @@ class LoginController
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-            $email = ($_POST['mail']);
-            $password = ($_POST['password_log']);
+            $email = $_POST['mail'];
+            $password = $_POST['password_log'];
 
             $LogInRepository = new LogInRepository();
-            $LogIn = $LogInRepository->login($email);
+            $user = $LogInRepository->login($email);
 
-            if ($LogIn && password_verify($password, $LogIn['password'])) {
+            if ($user && password_verify($password, $user['password'])) {
                 session_start();
+                $_SESSION['user_id'] = $user['id_person'];
                 header("Location: AccountPageTemplate.php");
                 exit;
             }
         }
     }
+
 
     public function index()
     {
@@ -36,6 +38,5 @@ class LoginController
         ];
 
         $this->render('ToLogInPageTemplate', $viewData);
-
     }
 }

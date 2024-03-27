@@ -31,17 +31,10 @@
     <section class="form">
         <div class="container_form">
             <form method="POST" action="" onsubmit="check_form_validity_first()">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Surname *</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Firstname *</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" required>
-                </div>
+
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Date *</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" required>
+                    <input type="date" name="date" class="form-control" id="exampleFormControlInput1" required>
                 </div>
                 <div class="mb-3">
                     <label for="autoSizingSelect">Choisissez un skin</label>
@@ -50,6 +43,7 @@
                         <?php
 
                         require_once __DIR__ . '/../Controllers/SkinController.php';
+                        require_once __DIR__ . '/../Controllers/ReservationController.php';
 
                         $SkinRepository = new SkinRepository();
                         $Skins = $SkinRepository->getAll();

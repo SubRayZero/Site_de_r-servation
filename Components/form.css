@@ -8,6 +8,7 @@
     align-items: center;
 }
 
+
 .container_form {
     background-color: #8C9BAD;
     height: 1129px;
@@ -50,6 +51,47 @@ select {
     width: 575px;
 
     margin-top: 77px;
+    border-radius: 20px;
+    background-color: #F7BB2B;
+    border: 0;
+
+    font-weight: 600;
+    font-style: italic;
+    text-transform: uppercase;
+
+}
+
+.form_delete{
+    background-color: #3E4049;
+    height: 600px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_form_delete{
+    background-color: #8C9BAD;
+    height: 400px;
+    width: 734px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    font-size: 30px;
+    font-weight: 600;
+    gap: 83px;
+}
+
+.button_validation_delete {
+    height: 85px;
+    width: 575px;
+
+    margin-top: 30px;
     border-radius: 20px;
     background-color: #F7BB2B;
     border: 0;

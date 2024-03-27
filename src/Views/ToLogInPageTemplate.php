@@ -29,6 +29,7 @@
 
     <section class="form">
         <div class="container_form">
+
             <form method="POST" action="" onsubmit="return check_form_validity()">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Adresse mail *</label>

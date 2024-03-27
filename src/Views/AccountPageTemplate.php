@@ -1,10 +1,15 @@
 <?php
 
+session_start();
+
+require_once __DIR__ . '/../Controllers/WeaponController.php';
+
+$WeaponRepository = new WeaponRepository();
+$weapon = $WeaponRepository->getAll();
 
 
 
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -29,48 +34,23 @@
     <header>
         <div class="container_header">
             <a href="http://projet6/Site_de_reservation/public/">
-                <div class="inscription">Accueil</div>
+                <div class="inscription">Déconnexion</div>
             </a>
         </div>
     </header>
     <section class="section_card">
         <div class="container_card">
-            <div class="card_size">
-                <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
-            </div>
-            <div class="card_size">
-                <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
-            </div>
-            <div class="card_size">
-                <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
-            </div>
-            <div class="card_size">
-                <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
-            </div>
-            <div class="card_size">
-                <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
-            </div>
-            <div class="card_size">
-                <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
-            </div>
+            <?php foreach ($weapon as $weapon) : ?>
+                <div class="card_size">
+                    <div class="container_image"></div>
+                    <a href="ReservationPageTemplate.php">
+                        <div class="button_reservation" <?= $weapon->getId_weapon();
+                                                        if ($weapon === !null) {
+                                                            $_SESSION['weapon'];
+                                                        } ?>>Réservez maintenant</div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
     </section>
 
@@ -101,4 +81,5 @@
             </form>
         </div>
     </section>
+
 </body>

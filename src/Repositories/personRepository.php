@@ -45,4 +45,16 @@ final class PersonRepository extends Db
         return $req->fetchAll(PDO::FETCH_CLASS, Person::class);
     }
 
+    public function delete($email)
+    {
+        $query = 'DELETE FROM person WHERE email = :email';
+
+        $req = $this->getDb()->prepare($query);
+
+        $req->execute([
+            'email' => $email,
+        ]);
+
+        return $req->fetchAll(PDO::FETCH_CLASS, Person::class);
+    }
 }

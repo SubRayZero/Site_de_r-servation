@@ -30,7 +30,7 @@ function classLoarder($className)
 
 spl_autoload_register("classLoarder");
 
-session_start();
+
 
 $database = new Db();
 $database->getDb();

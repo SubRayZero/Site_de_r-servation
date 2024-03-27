@@ -6,7 +6,7 @@ require __DIR__ . "/Controllers/RegisterController.php";
 require __DIR__ . "/Controllers/ReservationController.php";
 require __DIR__ . "/Controllers/SkinController.php";
 require __DIR__ . "/Controllers/AccountController.php";
-
+//require __DIR__ . "/Controllers/DeleteController.php";
 $uri = $_SERVER['REQUEST_URI'];
 
 $homeController = new HomeController();
@@ -15,6 +15,8 @@ $registerController = new RegisterController();
 $reservationController = new ReservationController();
 $skinController = new SkinController();
 $accountController = new AccountController();
+$deleteController = new DeleteController();
+$weaponController = new WeaponController();
 
 switch ($uri) {
     case URL_HOMEPAGE:
@@ -36,5 +38,7 @@ switch ($uri) {
 
     case URL_ACCOUNT:
         $accountController->index();
+        $deleteController->index();
+        $weaponController->index();
         break;
 }

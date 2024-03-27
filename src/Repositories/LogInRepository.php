@@ -22,7 +22,5 @@ final class LogInRepository extends Db
         ]);
 
         return $req->fetch(PDO::FETCH_ASSOC);
-
-
     }
 }

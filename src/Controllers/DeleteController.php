@@ -3,23 +3,19 @@
 require_once __DIR__ . '/../Services/Response.php';
 require_once __DIR__ . '/../Repositories/PersonRepository.php';
 
-
-class AccountController
+class DeleteController
 {
     use Response;
 
-    public function change()
+    public function delete()
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-            $name = $_POST['surname'];
-            $first_name = $_POST['firstname'];
-            $email = ($_POST['email']);
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $email_delete = ($_POST['email_delete']);
 
             $PersonRepository = new PersonRepository();
 
-            $result = $PersonRepository->update($name, $first_name, $email, $password);
+            $result = $PersonRepository->delete($email_delete);
 
             return $result;
         }
@@ -28,7 +24,7 @@ class AccountController
 
     public function index()
     {
-        $result = $this->change();
+        $result = $this->delete();
 
 
         $viewData = [
@@ -38,3 +34,4 @@ class AccountController
         $this->render('AccountPageTemplate', $viewData);
     }
 }
+
