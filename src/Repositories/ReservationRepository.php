@@ -10,10 +10,9 @@ final class ReservationRepository extends Db
         return $data->fetchAll(PDO::FETCH_CLASS, Reservation::class);
     }
 
-    public function create($date, $id_weapon, $id_person,)
+    public function create($date, $id_weapon, $id_person)
     {
-        $query = 'INSERT INTO reservation (date, id_weapon, id_person) 
-                  VALUES (:date, :id_weapon, :id_person)';
+        $query = 'INSERT INTO reservation (date, id_weapon, id_person) VALUES (:date, :id_weapon, :id_person)';
 
         $req = $this->getDb()->prepare($query);
 
@@ -23,6 +22,6 @@ final class ReservationRepository extends Db
             'id_person' => $id_person,
         ]);
 
-        return $req->fetchAll(PDO::FETCH_CLASS, Weapon::class);
+        return $req->fetchAll(PDO::FETCH_CLASS, Reservation::class);
     }
 }

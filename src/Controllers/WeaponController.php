@@ -9,14 +9,33 @@ class WeaponController
     use Response;
 
 
+    public function weapon()
+    {
+
+        if (
+            $_SERVER["REQUEST_METHOD"] === "POST"
+        ) {
+
+            $_SESSION['id_weapon'] = $_POST['id_weapon'];
+            //$id_person = $_SESSION['user_id'];
+
+            $WeaponRepository = new WeaponRepository();
+            $weapon = $WeaponRepository->getAll();
+
+            session_start();
+            $_SESSION["id_weapon"] = $weapon["id_weapon"];
+            header("Location: AccountPageTemplate.php");
+        }
+    }
+
+
     public function index()
     {
 
-        $WeaponRepository= new WeaponRepository();
-        $weapon = $WeaponRepository->getAll();
+        $Weapon = $this->weapon();
 
         $viewData = [
-            'weapon' => $weapon
+            'weapon' => $Weapon
         ];
 
         $this->render('AccountPageTemplate', $viewData);

@@ -28,7 +28,6 @@ class LoginController
         }
     }
 
-
     public function index()
     {
         $LogIn = $this->logIn();

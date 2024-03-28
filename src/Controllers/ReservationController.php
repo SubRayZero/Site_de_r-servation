@@ -11,37 +11,37 @@ class ReservationController
 
     public function Reservation()
     {
-       
+
         session_start();
+
+        if (isset($_POST['id_weapon'])) {
+            $_SESSION['id_weapon'] = $_POST['id_weapon'];
+        }
         $id_person = $_SESSION['user_id'];
-        $id_arme = $_SESSION['id_weapon'];
+        $id_weapon = $_SESSION['id_weapon'];
 
-        print_r($id_arme);
+        if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['date'])) {
 
-        if (
-            $_SERVER["REQUEST_METHOD"] === "POST"
-            && isset($id_person)
-            && isset($id_arme)
-        ) {
+            $_SESSION['id_weapon'] = $_POST['id_weapon'];
+            $id_person = $_SESSION['user_id'];
+            $id_weapon = $_SESSION['id_weapon'];
+
             $date = $_POST['date'];
-            $ReservationRepository = new ReservationRepository();
-            $reservation = $ReservationRepository->create($date, $id_person, $id_arme);
+            $date = date('Y-m-d', strtotime($date));
 
-            if (isset($reservation)) {
-                
-                header("Location: ReservationPageTemplate.php");
-                exit;
-            } else {
-                header("Location: AccountPageTemplate.php");
-            }
+            $ReservationRepository = new ReservationRepository();
+            $reservation = $ReservationRepository->create($date, $id_weapon, $id_person);
+
+            header("Location: AccountPageTemplate.php");
+            exit;
+
+            return $reservation;
         }
     }
-
 
     public function index()
     {
         $this->Reservation();
-
         $this->render('ReservationPageTemplate');
     }
 }

@@ -8,7 +8,6 @@ $WeaponRepository = new WeaponRepository();
 $weapon = $WeaponRepository->getAll();
 
 
-
 ?>
 
 <!doctype html>
@@ -39,19 +38,16 @@ $weapon = $WeaponRepository->getAll();
         </div>
     </header>
     <section class="section_card">
-        <div class="container_card">
-            <?php foreach ($weapon as $weapon) : ?>
-                <div class="card_size">
-                    <div class="container_image"></div>
-                    <a href="ReservationPageTemplate.php">
-                        <div class="button_reservation" <?= $weapon->getId_weapon();
-                                                        if ($weapon === !null) {
-                                                            $_SESSION['weapon'];
-                                                        } ?>>Réservez maintenant</div>
-                    </a>
-                </div>
-            <?php endforeach; ?>
-        </div>
+        <form method="POST" action="ReservationPageTemplate.php" onsubmit="return check_form_validity()">
+            <div class="container_card">
+                <?php foreach ($weapon as $weapon) : ?>
+                    <div class="card_size">
+                        <div class="container_image"></div>
+                        <button type="submit" name="id_weapon" value="<?= $weapon->getId_weapon(); ?>">Réservez maintenant</button>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </form>
     </section>
 
     <section class="form">
