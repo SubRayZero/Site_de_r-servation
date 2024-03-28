@@ -43,7 +43,7 @@ $weapon = $WeaponRepository->getAll();
                 <?php foreach ($weapon as $weapon) : ?>
                     <div class="card_size">
                         <div class="container_image"></div>
-                        <button type="submit" name="id_weapon" value="<?= $weapon->getId_weapon(); ?>">Réservez maintenant</button>
+                        <button class="button_reservation" type="submit" name="id_weapon" value="<?= $weapon->getId_weapon(); ?>">Réservez maintenant</button>
                     </div>
                 <?php endforeach; ?>
             </div>
