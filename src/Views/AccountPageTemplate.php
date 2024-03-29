@@ -39,11 +39,13 @@ $weapon = $WeaponRepository->getAll();
     <section class="section_card">
         <form method="POST" action="ReservationPageTemplate.php" onsubmit="return check_form_validity()">
             <div class="container_card">
+                <?php $counter = 1; ?>
                 <?php foreach ($weapon as $weapon) : ?>
                     <div class="card_size">
-                        <div class="container_image"></div>
-                        <button class="button_reservation" type="submit" name="id_weapon" value="<?= $weapon->getId_weapon(); ?>">Réservez maintenant</button>
+                        <div class="container_image_<?php echo $counter; ?>"></div>
+                            <button class="button_reservation" type="submit" name="id_weapon" value="<?= $weapon->getId_weapon(); ?>">Réservez maintenant</button>
                     </div>
+                    <?php $counter++; ?>
                 <?php endforeach; ?>
             </div>
         </form>
@@ -100,8 +102,9 @@ $weapon = $WeaponRepository->getAll();
     <section class="form_delete">
         <div class="container_form_delete">
             <form method="POST" action="/Site_de_reservation/public/delete" onsubmit="return check_form_validity()">
-                
-                <input type="submit" value="Supprimer le compte <?= isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ''; ?>" id="delete" class="button_validation_delete" />
+
+                <input type="hidden" name="user_id" value="<?= isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ''; ?>">
+                <input type="submit" class="button_validation_delete" value="Supprimer le compte">
             </form>
         </div>
     </section>

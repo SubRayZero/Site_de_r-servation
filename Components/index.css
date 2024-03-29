@@ -124,8 +124,44 @@ img {
 
 }
 
-.container_image {
+.container_image_1 {
     background-image: url(../img/asset_image_arme_1.png);
+    background-size: cover;
+    height: 304px;
+    width: 361px;
+
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container_image_2{
+    background-image: url(../img/asset_image_arme_2.png);
+    background-size: cover;
+    height: 304px;
+    width: 361px;
+
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container_image_3{
+    background-image: url(../img/asset_image_arme_3.png);
+    background-size: cover;
+    height: 304px;
+    width: 361px;
+
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container_image_4{
+    background-image: url(../img/asset_image_arme_4.png);
+    background-size: cover;
+    height: 304px;
+    width: 361px;
+
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container_image_5{
+    background-image: url(../img/asset_image_arme_5.png);
     background-size: cover;
     height: 304px;
     width: 361px;

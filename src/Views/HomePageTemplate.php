@@ -47,27 +47,23 @@ session_destroy();
     <section class="section_card">
         <div class="container_card">
             <div class="card_size">
-                <div class="container_image"></div>
+                <div class="container_image_1"></div>
                 <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
-                <div class="container_image"></div>
+                <div class="container_image_2"></div>
                 <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
-                <div class="container_image"></div>
+                <div class="container_image_3"></div>
                 <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
-                <div class="container_image"></div>
+                <div class="container_image_4"></div>
                 <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
-                <div class="container_image"></div>
-                <div class="button_reservation">Réservez maintenant</div>
-            </div>
-            <div class="card_size">
-                <div class="container_image"></div>
+                <div class="container_image_5"></div>
                 <div class="button_reservation">Réservez maintenant</div>
             </div>
         </div>
