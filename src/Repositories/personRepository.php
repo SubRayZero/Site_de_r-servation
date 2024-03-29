@@ -57,4 +57,14 @@ final class PersonRepository extends Db
 
         return $req->fetchAll(PDO::FETCH_CLASS, Person::class);
     }
+
+    public function getPersonId($person_id)
+    {
+        $req = $this->getDb()->prepare('SELECT * FROM person WHERE id_person = :id_person');
+
+        $req->execute([
+            'id_person' => $person_id
+        ]);
+        return $req->fetchAll(PDO::FETCH_CLASS, Person::class);
+    }
 }

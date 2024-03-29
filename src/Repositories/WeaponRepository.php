@@ -10,12 +10,22 @@ final class WeaponRepository extends Db
         return $data->fetchAll(PDO::FETCH_CLASS, Weapon::class);
     }
 
-    public function getId_weapon($id_weapon)
+    public function getWeaponId($weapon_id)
     {
         $req = $this->getDb()->prepare('SELECT * FROM weapon WHERE id_weapon = :id_weapon');
 
         $req->execute([
-            'id_weapon' => $id_weapon
+            'id_weapon' => $weapon_id
+        ]);
+        return $req->fetchAll(PDO::FETCH_CLASS, Weapon::class);
+    }
+
+    public function getName($name_weapon)
+    {
+        $req = $this->getDb()->prepare('SELECT * FROM weapon WHERE name = :name');
+
+        $req->execute([
+            'name' => $name_weapon
         ]);
         return $req->fetchAll(PDO::FETCH_CLASS, Weapon::class);
     }

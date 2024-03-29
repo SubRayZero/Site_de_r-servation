@@ -3,6 +3,7 @@
 session_start();
 
 require_once __DIR__ . '/../Controllers/WeaponController.php';
+require_once __DIR__ . '/../Controllers/ReservationController.php';
 
 $WeaponRepository = new WeaponRepository();
 $weapon = $WeaponRepository->getAll();
@@ -75,6 +76,26 @@ $weapon = $WeaponRepository->getAll();
                 </div>
                 <input type="submit" value="Confirmer les changements" id="inscription" class="button_validation" />
             </form>
+        </div>
+    </section>
+
+    <section class="form_reservation">
+        <div class="container_form_reservation">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Reservation</label>
+                    <input type="texte" value="<?= isset($_SESSION['reserved_person_id']) ? $_SESSION['reserved_person_id'] : ''; ?>" class="form-control input" name="surname" id="surname" minlength="3" maxlength="50" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Weapon</label>
+                    <input type="text" value="<?= isset($_SESSION['reserved_weapon_name']) ? $_SESSION['reserved_weapon_name'] : ''; ?>" class="form-control" name="firstname" id="firstname" minlength="3" maxlength="50">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Date</label>
+                    <input type="date" value="<?=  isset($_SESSION['reserved_date']) ? $_SESSION['reserved_date'] : ''; ?>" class="form-control" name="date" id="date" minlength="3" maxlength="80" required>
+                </div>
+            </form>
+
         </div>
     </section>
 

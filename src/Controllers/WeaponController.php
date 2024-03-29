@@ -22,9 +22,17 @@ class WeaponController
             $WeaponRepository = new WeaponRepository();
             $weapon = $WeaponRepository->getAll();
 
+
+
+
             session_start();
             $_SESSION["id_weapon"] = $weapon["id_weapon"];
+
+
+            $WeaponRepository = new WeaponRepository();
+            $weapon_id = $WeaponRepository->getWeaponId($weapon);
             header("Location: AccountPageTemplate.php");
+            return $weapon_id;
         }
     }
 
@@ -35,7 +43,7 @@ class WeaponController
         $Weapon = $this->weapon();
 
         $viewData = [
-            'weapon' => $Weapon
+            'weapon' => $Weapon,
         ];
 
         $this->render('AccountPageTemplate', $viewData);

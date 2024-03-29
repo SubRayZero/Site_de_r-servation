@@ -61,7 +61,7 @@ select {
 
 }
 
-.form_delete{
+.form_delete {
     background-color: #3E4049;
     height: 600px;
     width: 100%;
@@ -71,7 +71,7 @@ select {
     align-items: center;
 }
 
-.container_form_delete{
+.container_form_delete {
     background-color: #8C9BAD;
     height: 400px;
     width: 734px;
@@ -100,4 +100,30 @@ select {
     font-style: italic;
     text-transform: uppercase;
 
+}
+
+.form_reservation {
+    background-color: #3E4049;
+    height: 600px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_form_reservation {
+    background-color: #8C9BAD;
+    height: 600px;
+    width: 734px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    font-size: 30px;
+    font-weight: 600;
+    gap: 83px;
 }

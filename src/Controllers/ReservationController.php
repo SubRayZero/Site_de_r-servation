@@ -32,6 +32,22 @@ class ReservationController
             $ReservationRepository = new ReservationRepository();
             $reservation = $ReservationRepository->create($date, $id_weapon, $id_person);
 
+            $WeaponRepository = new WeaponRepository();
+            $reserved_weapon = $WeaponRepository->getWeaponId($id_weapon);
+
+            $PersonRepository = new PersonRepository();
+            $reserved_person = $PersonRepository->getPersonId($id_person);
+
+            if ($reserved_person) {
+                $_SESSION['reserved_person_id'] = $reserved_person[0]->getName();
+            }
+
+            if ($reserved_weapon) {
+                $_SESSION['reserved_weapon_name'] = $reserved_weapon[0]->getName();
+            }
+
+            $_SESSION['reserved_date'] = $date;
+
             header("Location: AccountPageTemplate.php");
             exit;
 
