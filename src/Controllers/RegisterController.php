@@ -20,6 +20,10 @@ class RegisterController
 
             $result = $PersonRepository->create($name, $first_name, $email, $password);
 
+
+            header("Location: ToLogInPageTemplate.php");
+            exit;
+
             return $result;
         }
     }

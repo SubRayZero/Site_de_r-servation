@@ -1,4 +1,12 @@
 
+<?php
+
+session_start();
+session_unset();
+session_destroy();
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -28,7 +36,7 @@
 
     <section class="form">
         <div class="container_form">
-            <form method="POST" action="" onsubmit="return check_form_validity()">
+            <form method="POST" action="ToLogInPageTemplate.php" onsubmit="return check_form_validity()">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Surname *</label>
                     <input type="texte" class="form-control input" name="surname" id="surname" minlength="3" maxlength="50" required>

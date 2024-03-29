@@ -11,23 +11,17 @@ class DeleteController
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-            $email_delete = ($_POST['email_delete']);
-
+            $email_delete = $_POST['email'];
             $PersonRepository = new PersonRepository();
 
             $result = $PersonRepository->delete($email_delete);
-            header("Location: HomePageTemplate.php");
-
             return $result;
         }
     }
 
-
     public function index()
     {
         $result = $this->delete();
-
-
         $viewData = [
             'result' => $result
         ];
@@ -35,3 +29,4 @@ class DeleteController
         $this->render('AccountPageTemplate', $viewData);
     }
 }
+
