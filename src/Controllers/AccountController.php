@@ -17,11 +17,12 @@ class AccountController
             $email = ($_POST['email']);
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-            var_dump($_POST);
-
             $PersonRepository = new PersonRepository();
 
             $result = $PersonRepository->update($name, $first_name, $email, $password);
+
+            header("Location: ToLogInPageTemplate.php");
+            exit;
 
             return $result;
         }

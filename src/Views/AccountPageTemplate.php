@@ -8,7 +8,7 @@ require_once __DIR__ . '/../Controllers/DeleteController.php';
 
 $WeaponRepository = new WeaponRepository();
 $weapon = $WeaponRepository->getAll();
-var_dump($_SESSION);
+
 ?>
 
 <!doctype html>
