@@ -28,9 +28,7 @@ $weapon = $WeaponRepository->getAll();
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-
     <header>
         <div class="container_header">
             <a href="http://projet6/Site_de_reservation/public/">
