@@ -38,7 +38,10 @@ switch ($uri) {
 
     case URL_ACCOUNT:
         $accountController->index();
-        $deleteController->index();
         $weaponController->index();
+        break;
+
+    case URL_DELETE:
+        $deleteController->delete();
         break;
 }

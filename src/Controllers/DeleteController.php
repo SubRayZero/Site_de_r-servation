@@ -10,12 +10,19 @@ class DeleteController
     public function delete()
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            
+            session_start();
 
-            $email_delete = $_POST['email'];
-            $PersonRepository = new PersonRepository();
+            //$emailPost = $_POST['email'];
+            $person_id = $_SESSION['user_id'];
+            $PersonRepositoryDelete = new PersonRepository();
 
-            $result = $PersonRepository->delete($email_delete);
-            return $result;
+            $delete = $PersonRepositoryDelete->delete($person_id);
+            header("Location: RegisterPageTemplate.php");
+            exit;
+
+
+            return $delete;
         }
     }
 

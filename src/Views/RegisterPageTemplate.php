@@ -57,7 +57,7 @@ session_destroy();
                     <label for="exampleFormControlInput1" class="form-label">Confirm Password *</label>
                     <input type="password" class="form-control" name="confirm_password" id="confirm_password" minlength="7" required>
                 </div>
-                <input type="submit" value="Inscription" id="inscription" class="button_validation" />
+                <input type="submit" value="Confirmer l'inscription" id="inscription" class="button_validation" />
             </form>
         </div>
     </section>

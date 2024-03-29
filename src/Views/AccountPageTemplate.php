@@ -8,7 +8,7 @@ require_once __DIR__ . '/../Controllers/DeleteController.php';
 
 $WeaponRepository = new WeaponRepository();
 $weapon = $WeaponRepository->getAll();
-
+var_dump($_SESSION);
 ?>
 
 <!doctype html>
@@ -90,7 +90,7 @@ $weapon = $WeaponRepository->getAll();
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Date</label>
-                    <input type="date" value="<?=  isset($_SESSION['reserved_date']) ? $_SESSION['reserved_date'] : ''; ?>" class="form-control" name="date" id="date" minlength="3" maxlength="80" required>
+                    <input type="date" value="<?= isset($_SESSION['reserved_date']) ? $_SESSION['reserved_date'] : ''; ?>" class="form-control" name="date" id="date" minlength="3" maxlength="80" required>
                 </div>
             </form>
 
@@ -99,12 +99,9 @@ $weapon = $WeaponRepository->getAll();
 
     <section class="form_delete">
         <div class="container_form_delete">
-            <form method="POST" action="http://projet6/Site_de_reservation/public/" onsubmit="return check_form_validity()">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Entrez votre adresse mail</label>
-                    <input type="email" class="form-control" name="email" id="email" minlength="3" maxlength="80" required>
-                </div>
-                <input type="submit" value="Supprimer le compte" id="delete" class="button_validation_delete" />
+            <form method="POST" action="/Site_de_reservation/public/delete" onsubmit="return check_form_validity()">
+                
+                <input type="submit" value="Supprimer le compte <?= isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ''; ?>" id="delete" class="button_validation_delete" />
             </form>
         </div>
     </section>
