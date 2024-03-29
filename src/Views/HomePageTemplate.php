@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -41,39 +40,27 @@
         <div class="container_card">
             <div class="card_size">
                 <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
+                <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
+                <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
+                <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
+                <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
+                <div class="button_reservation">Réservez maintenant</div>
             </div>
             <div class="card_size">
                 <div class="container_image"></div>
-                <a href="ReservationPageTemplate.php">
-                    <div class="button_reservation">Réservez maintenant</div>
-                </a>
+                <div class="button_reservation">Réservez maintenant</div>
             </div>
         </div>
 

@@ -16,6 +16,7 @@ class DeleteController
             $PersonRepository = new PersonRepository();
 
             $result = $PersonRepository->delete($email_delete);
+            header("Location: HomePageTemplate.php");
 
             return $result;
         }
@@ -34,4 +35,3 @@ class DeleteController
         $this->render('AccountPageTemplate', $viewData);
     }
 }
-
