@@ -133,7 +133,7 @@ img {
     border-radius: 20px 20px 0px 0px;
 }
 
-button{
+button {
     box-shadow: none;
     border: 0;
     background: transparent;
@@ -159,3 +159,244 @@ button{
     font-weight: 600;
 }
 
+
+@media screen and (max-width: 1400px) {
+    img {
+        height: 300px;
+        width: 700px;
+
+    }
+
+    .container_texte {
+        height: 300px;
+        width: 1000px;
+
+    }
+
+}
+
+@media screen and (max-width: 1250px) {
+    img {
+        height: 260px;
+        width: 600px;
+
+    }
+
+    .container_texte {
+        height: 260px;
+        width: 800px;
+
+    }
+
+    .texte {
+        height: 232px;
+        width: 356px;
+
+        margin-left: 61px;
+        margin-right: 751px;
+        margin-top: 51px;
+        margin-bottom: 85px;
+
+        font-size: 40px;
+        font-weight: 600;
+
+    }
+
+}
+
+@media screen and (max-width: 1132px) {
+    img {
+        height: 240px;
+        width: 500px;
+
+    }
+
+}
+
+@media screen and (max-width: 1040px) {
+    img {
+        display: none;
+
+    }
+
+    .container_texte {
+        height: 260px;
+        width: 750px;
+
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .container_texte {
+        height: 260px;
+        width: 700px;
+
+    }
+
+}
+
+@media screen and (max-width: 802px) {
+    .container_texte {
+        height: 260px;
+        width: 560px;
+
+    }
+
+}
+
+@media screen and (max-width: 663px) {
+    .container_texte {
+        height: 260px;
+        width: 450px;
+
+    }
+
+}
+
+@media screen and (max-width: 663px) {
+    .container_texte {
+        height: 260px;
+        width: 400px;
+
+    }
+
+}
+
+@media screen and (max-width: 514px) {
+    .container_texte {
+        height: 260px;
+        width: 350px;
+
+    }
+
+}
+
+@media screen and (max-width: 465px) {
+    .container_texte {
+        height: 260px;
+        width: 400px;
+
+    }
+
+    .section_red {
+        background-color: #C9173A;
+        height: 631px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_texte {
+        height: 260px;
+        width: 400px;
+        margin-left: 0px;
+        margin-right: 0px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .texte {
+        height: 232px;
+        width: 356px;
+
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+
+    }
+
+}
+
+@media screen and (max-width: 316px) {
+
+    .section_red {
+        background-color: #C9173A;
+        height: 631px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .container_texte {
+        height: 260px;
+        width: 200px;
+        margin-left: 0px;
+        margin-right: 0px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .texte {
+        height: 232px;
+        width: 356px;
+
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+
+        font-size: 25px;
+        font-weight: 600;
+
+    }
+
+    .container_card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 56px;
+    }
+
+    .card_size {
+        width: 300px;
+
+    }
+
+    .container_image {
+        background-image: url(../img/asset_image_arme_1.png);
+        background-size: cover;
+        height: 250px;
+        width: 300px;
+
+    }
+
+    button {
+        box-shadow: none;
+        border: 0;
+        background: transparent;
+
+        font-size: 24px;
+        font-weight: 600;
+
+        font-style: italic;
+        text-transform: uppercase;
+    }
+
+    .button_reservation {
+        height: 64px;
+        width: 300px;
+        background-color: #F7BB2B;
+        border-radius: 0px 0px 20px 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+}
