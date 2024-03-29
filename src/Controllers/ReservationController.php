@@ -28,6 +28,10 @@ class ReservationController
 
             $date = $_POST['date'];
             $date = date('Y-m-d', strtotime($date));
+            $skin_id = $_POST['skin'];
+
+            $Weapon_SkinRepository = new Weapon_SkinRepository();
+            $Weapon_Skin = $Weapon_SkinRepository->createSkinsWeapon($skin_id, $id_weapon);
 
             $ReservationRepository = new ReservationRepository();
             $reservation = $ReservationRepository->create($date, $id_weapon, $id_person);
@@ -52,6 +56,7 @@ class ReservationController
             exit;
 
             return $reservation;
+            return $Weapon_Skin;
         }
     }
 

@@ -10,17 +10,20 @@ final class Weapon_SkinRepository extends Db
         return $data->fetchAll(PDO::FETCH_CLASS, Weapon_Skin::class);
     }
 
-    public function getSkinsWeapon($weaponId)
+    public function createSkinsWeapon($skinId, $weaponId)
     {
-        $query = "SELECT ws.id_skin, s.name FROM weapon_skin ws
-                      INNER JOIN skin s ON ws.id_skin = s.id_skin
-                      WHERE ws.id_weapon = :weaponId";
+        $query = "INSERT INTO weapon_skin (id_skin, id_weapon) 
+        SELECT :skinId, :weaponId 
+        FROM skin, weapon
+        WHERE skin.id_skin = :skinId 
+        AND weapon.id_weapon = :weaponId";
 
         $req = $this->getDb()->prepare($query);
         $req->execute([
-            'weaponId' => $weaponId
+            'weaponId' => $weaponId,
+            'skinId' => $skinId
         ]);
 
-        return $req->fetchAll(PDO::FETCH_CLASS, Weapon_Skin::class);
+        //return $req->fetchAll(PDO::FETCH_CLASS, Weapon_Skin::class);
     }
 }

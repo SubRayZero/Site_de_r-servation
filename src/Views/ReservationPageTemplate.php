@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+require_once __DIR__ . '/../Controllers/SkinController.php';
+require_once __DIR__ . '/../Controllers/ReservationController.php';
+
+$SkinRepository = new SkinRepository();
+$skin = $SkinRepository->getAll();
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -39,25 +52,10 @@
                 <div class="mb-3">
                     <label for="autoSizingSelect">Choisissez un skin</label>
                     <select name="skin" class="form-select" id="autoSizingSelect">
-
-                        <?php
-
-                        require_once __DIR__ . '/../Controllers/SkinController.php';
-                        require_once __DIR__ . '/../Controllers/ReservationController.php';
-                        require_once __DIR__ . '/../Controllers/WeaponController.php';
-
-                        $SkinRepository = new SkinRepository();
-                        $Skins = $SkinRepository->getAll();
-
-                        foreach ($Skins as $skin) {
-
-                            echo ('<option>' . $skin->getName() .  '</option>');
-                        }
-
-                        ?>
-
+                        <?php foreach ($skin as $skin) : ?>
+                            <option value="<?= $skin->getId_skin(); ?>"><?= $skin->getName(); ?></option>
+                        <?php endforeach; ?>
                     </select>
-
                 </div>
                 <input type="submit" value="Confirmez la réservation" id="inscription" class="button_validation" />
             </form>

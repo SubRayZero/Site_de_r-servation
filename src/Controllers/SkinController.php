@@ -5,20 +5,25 @@ require_once __DIR__ . '/../Repositories/SkinRepository.php';
 
 class SkinController
 {
-
     use Response;
 
+    public function skin()
+    {
+        $SkinRepository = new SkinRepository();
+        $skin = $SkinRepository->getAll();
+
+        return $skin;
+    }
 
     public function index()
     {
-
-        $SkinRepository= new SkinRepository();
-        $Skins = $SkinRepository->getAll();
+        $skins = $this->skin();
 
         $viewData = [
-            'skin' => $Skins
+            '
+        skins' => $skins
+        
         ];
-
         $this->render('ReservationPageTemplate', $viewData);
     }
 }
